@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+	int a[10][10],i,n,j,in,out;
+	printf("\n enter no of vertices :");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+	for(j=1;j<=n;j++)
+	{
+	printf("\n enter the graph in the frame format:");
+	scanf("\n %d",&a[i][j]);
+	}
+}
+	for(i=1;i<=n;i++)
+	{
+	printf("\t V%d",i);
+	}
+	
+	for(i=1;i<=n;i++)
+	{
+	printf("\n V%d",i);
+	for(j=1;j<=n;j++)
+	{
+	printf("\t %d",a[i][j]);
+	}
+}
+	for(i=1;i<=n;i++)
+	{
+	in=0;
+	out=0;
+	for(j=1;j<=n;j++)
+	{
+	in=in+a[i][j];
+	out=out+a[j][i];
+	}
+	printf("\n V%d indegree=%d\t outdegre=%d",i,in,out);
+	}
+}
